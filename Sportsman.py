@@ -2,17 +2,17 @@ class Sportsman:
     def __init__(self):
         self.steroids = "steroids"
 
-    def run(self, distance):
-        if type(distance) == int:
+    def run(self, distance = None):
+        if type(distance) == int or type(distance) == float:
             if distance == 60:
-                res = 7
+                res = 7.1
                 return res
             if distance == 100:
-                res = 12
+                res = 12.8
                 return res
         return False
-    def jump(self, type_jump):
-        if type(type_jump) == str:
+    def jump(self, type_jump = None):
+        if type(type_jump) == str :
             if type_jump == "from the spot":
                 res = 3
                 return  res
@@ -20,18 +20,18 @@ class Sportsman:
                 res = 8
                 return  res
         return False
-    def sleep(self, hours):
-        if type(hours) == int:
+    def sleep(self, hours = None):
+        if type(hours) == int or type(hours) == float:
             if hours >= 8 or hours <= 10:
-                res = "I recovered"
+                res = True
                 return  res
             if hours >= 0 or hours <= 8:
-                res = "I didn't recover"
+                res = False
                 return  res
         return False
-    def eat(self, meal):
+    def eat(self, meal = None):
         if meal == self.steroids:
-            res = "zaebumba"
+            res = True
             return res
         return False
 
